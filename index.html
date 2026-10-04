@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Muqquuu Jann ❤️</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:#0e0710;
+    color:#fff7fb;
+    overflow-x:hidden;
+}
+
+#app{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 20% 20%,#4b163855,transparent 30%),
+        radial-gradient(circle at 80% 40%,#8b245555,transparent 30%),
+        linear-gradient(135deg,#0e0710,#24101f,#120912);
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-heart{
+    position:fixed;
+    bottom:-40px;
+    font-size:18px;
+    pointer-events:none;
+    z-index:2;
+    animation:floatHeart linear forwards;
+    opacity:.75;
+}
+
+@keyframes floatHeart{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    padding:30px;
+    overflow:hidden;
+}
+
+.glow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:#ff3f8f33;
+    filter:blur(90px);
+    animation:pulse 5s infinite alternate;
+}
+
+@keyframes pulse{
+    from{
+        transform:scale(.85);
+        opacity:.5;
+    }
+
+    to{
+        transform:scale(1.15);
+        opacity:1;
+    }
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+    max-width:900px;
+}
+
+.small-title{
+    color:#ffb8d7;
+    font:700 13px Arial,sans-serif;
+    letter-spacing:5px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:clamp(52px,11vw,110px);
+    line-height:.95;
+    margin:25px 0;
+}
+
+.hero h1 span{
+    color:#ff78b4;
+    text-shadow:
+        0 0 15px #ff4f9a88,
+        0 0 45px #ff4f9a55;
+}
+
+.hero-subtitle{
+    color:#ead1dc;
+    font-size:clamp(19px,3vw,26px);
+    line-height:1.7;
+    max-width:750px;
+    margin:auto;
+}
+
+.hero-subtitle strong{
+    color:#ffb8d7;
+}
+
+.main-btn{
+    margin-top:35px;
+    padding:16px 32px;
+    border:0;
+    border-radius:50px;
+    background:linear-gradient(90deg,#ff4f9a,#ff8cc4);
+    color:white;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 12px 35px #ff4f9a55;
+    transition:.3s;
+}
+
+.main-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:90px 22px;
+}
+
+.title{
+    text-align:center;
+    font-size:clamp(34px,6vw,55px);
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#dcbccc;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:45px;
+}
+
+.card{
+    background:#ffffff0b;
+    border:1px solid #ffffff18;
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 25px 70px #0007;
+    backdrop-filter:blur(12px);
+}
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.love-letter{
+    font-size:21px;
+    line-height:2;
+    color:#f2dce6;
+}
+
+.love-letter p{
+    margin-bottom:25px;
+}
+
+.love-letter strong{
+    color:#ffb5d4;
+}
+
+.signature{
+    text-align:right;
+    margin-top:35px;
+    color:#ff9bc5;
+    font-size:24px;
+    font-style:italic;
+}
+
+/* =========================
+   POETRY
+========================= */
+
+.poetry{
+    margin-top:35px;
+    text-align:center;
+    padding:35px;
+    border-radius:25px;
+    background:linear-gradient(135deg,#ff4f9a12,#ffffff08);
+    border:1px solid #ff9acb20;
+}
+
+.poetry p{
+    color:#ffd8e8;
+    font-size:21px;
+    line-height:2;
+    font-style:italic;
+}
+
+.poetry .highlight{
+    color:#ff9ec8;
+    font-size:25px;
+}
+
+/* =========================
+   MEMORIES
+========================= */
+
+.gallery{
+    position:relative;
+    width:100%;
+    height:min(65vw,650px);
+    min-height:350px;
+    overflow:hidden;
+    border-radius:32px;
+    border:1px solid #ffffff1c;
+    background:#140b13;
+    box-shadow:0 25px 70px #0009;
+}
+
+.photo{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    visibility:hidden;
+    transform:scale(1.08);
+    transition:
+        opacity 1s ease,
+        transform 6s ease,
+        visibility 1s ease;
+}
+
+.photo.active{
+    opacity:1;
+    visibility:visible;
+    transform:scale(1);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.photo-caption{
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#0d0710bb;
+    backdrop-filter:blur(10px);
+    padding:10px 20px;
+    border-radius:50px;
+    color:white;
+    font:600 14px Arial,sans-serif;
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-box{
+    text-align:center;
+    margin-top:35px;
+}
+
+.music-btn{
+    padding:14px 27px;
+    border-radius:50px;
+    border:1px solid #ffb6d555;
+    background:#ff6fac18;
+    color:white;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.music-btn:hover{
+    transform:translateY(-3px);
+    background:#ff6fac30;
+}
+
+audio{
+    width:min(500px,90%);
+    margin-top:20px;
+}
+
+.music-status{
+    margin-top:12px;
+    color:#dcbccc;
+    font:14px Arial,sans-serif;
+}
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.reason{
+    padding:30px;
+    border-radius:25px;
+    background:#ff7eb610;
+    border:1px solid #ff9acb25;
+    transition:.3s;
+}
+
+.reason:hover{
+    transform:translateY(-7px);
+    background:#ff7eb618;
+}
+
+.reason-number{
+    color:#ff7fb5;
+    font:bold 14px Arial,sans-serif;
+    letter-spacing:2px;
+}
+
+.reason h3{
+    color:#ffb7d5;
+    margin:12px 0;
+    font-size:23px;
+}
+
+.reason p{
+    color:#dcbccc;
+    line-height:1.7;
+}
+
+/* =========================
+   PROMISES
+========================= */
+
+.promises{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.promise{
+    padding:28px;
+    border-radius:24px;
+    background:linear-gradient(135deg,#ffffff08,#ff4f9a10);
+    border:1px solid #ffffff12;
+}
+
+.promise span{
+    font-size:28px;
+}
+
+.promise h3{
+    color:#ffb8d7;
+    margin:10px 0;
+}
+
+.promise p{
+    color:#dcbccc;
+    line-height:1.7;
+}
+
+/* =========================
+   FUTURE WIFE
+========================= */
+
+.future{
+    text-align:center;
+}
+
+.future .card{
+    padding:55px 35px;
+}
+
+.future h3{
+    color:#ff8fbd;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.future p{
+    color:#e8d3dd;
+    font-size:21px;
+    line-height:2;
+}
+
+.ring{
+    font-size:75px;
+    margin:25px 0;
+    animation:ringPulse 2s infinite;
+}
+
+@keyframes ringPulse{
+    50%{
+        transform:scale(1.12) rotate(4deg);
+    }
+}
+
+/* =========================
+   SECRET LETTER
+========================= */
+
+.gift-section{
+    text-align:center;
+}
+
+.gift{
+    font-size:105px;
+    cursor:pointer;
+    display:inline-block;
+    animation:bob 1.8s infinite;
+    transition:.5s;
+}
+
+@keyframes bob{
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+.gift.open{
+    animation:none;
+    transform:scale(1.2) rotate(-5deg);
+}
+
+.secret{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 1s ease;
+}
+
+.secret.show{
+    max-height:900px;
+}
+
+.secret-card{
+    margin-top:30px;
+    text-align:center;
+}
+
+.secret-card p{
+    color:#e8d3dd;
+    font-size:20px;
+    line-height:2;
+}
+
+.final-love{
+    margin-top:30px;
+    color:#ff8fbd;
+    font-size:30px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+    text-align:center;
+    padding-bottom:110px;
+}
+
+.final-heart{
+    font-size:70px;
+    color:#ff70ac;
+    animation:heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat{
+    50%{
+        transform:scale(1.18);
+    }
+}
+
+.final h2{
+    font-size:clamp(38px,7vw,65px);
+    margin:20px 0;
+}
+
+.final p{
+    color:#dcbccc;
+    font-size:19px;
+    line-height:1.8;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px 65px;
+    color:#b99eaa;
+    border-top:1px solid #ffffff0d;
+}
+
+/* =========================
+   CELEBRATION
+========================= */
+
+.spark{
+    position:fixed;
+    pointer-events:none;
+    z-index:100;
+    animation:fall 2.7s linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(540deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:750px){
+
+    section{
+        padding:65px 18px;
+    }
+
+    .card{
+        padding:25px;
+    }
+
+    .love-letter{
+        font-size:18px;
+    }
+
+    .poetry p{
+        font-size:18px;
+    }
+
+    .gallery{
+        min-height:300px;
+    }
+
+    .reasons,
+    .promises{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:95vh;
+    }
+
+    .hero-subtitle{
+        font-size:18px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<main id="app">
+
+<!-- =========================
+     HERO
+========================= -->
+
+<div class="hero">
+
+    <div class="glow"></div>
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            For The Girl Who Has My Heart
+        </div>
+
+        <h1>
+            Happy Birthday<br>
+            <span>Muqquuu Jann ❤️</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            To <strong>Muqaddas</strong> — the girl who somehow became
+            one of the most beautiful parts of my life...
+            and hopefully, one day, my wife. 💍
+        </p>
+
+        <button class="main-btn" onclick="goTo('letter')">
+            Open Your Love Letter 💌
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     LOVE LETTER
+========================= -->
+
+<section id="letter">
+
+    <h2 class="title">
+        My Love Letter To You 💌
+    </h2>
+
+    <p class="subtitle">
+        There are some things that are easier to write than to say.
+    </p>
+
+    <div class="card love-letter">
+
+        <p>
+            <strong>Happy Birthday, my Muqquuu Jann. ❤️</strong>
+        </p>
+
+        <p>
+            I honestly don't know where to start because when it comes to you,
+            somehow words never feel enough. I can write a hundred things about
+            you and still feel like I haven't said even half of what I actually
+            feel.
+        </p>
+
+        <p>
+            You are not just someone I love. You have become someone I look
+            forward to, someone I think about during random moments of the day,
+            someone whose smile can change my entire mood without even trying.
+        </p>
+
+        <p>
+            And Muqaddas, I want you to know something today...
+            <strong>you are incredibly special to me.</strong>
+        </p>
+
+        <p>
+            I love the way you talk, the way you smile, the little expressions
+            you make, the way you sometimes get annoyed, the way you care,
+            and even those little things you probably don't think anyone notices.
+            I notice them.
+        </p>
+
+        <p>
+            And then there are your eyes...
+        </p>
+
+        <div class="poetry">
+
+            <p>
+                "Teri aankhon mein kuch aisi baat hai,<br>
+                ke lafz bhi khamosh ho jaate hain...
+                <br><br>
+
+                Tujhe dekhoon toh waqt ruk sa jaata hai,<br>
+                aur dil bas itna kehta hai...
+                <br><br>
+
+                <span class="highlight">
+                    Kaash ye pal kabhi khatam na ho. ❤️
+                </span>
+                "
+            </p>
+
+        </div>
+
+        <p>
+            And your hair...
+            I don't even know how to explain it properly.
+            Sometimes I just look at you and think how unfairly beautiful
+            Allah has made you.
+        </p>
+
+        <p>
+            Your eyes, your smile, your hair, your voice, your little habits,
+            your personality...
+            somehow all of these things come together and make
+            <strong>you.</strong>
+        </p>
+
+        <p>
+            But honestly, it's not just your beauty that makes me love you.
+            It's the person you are underneath all of it.
+        </p>
+
+        <p>
+            I want to be there for you when you're happy,
+            when you're stressed,
+            when you're angry,
+            when you're tired,
+            and especially when you don't feel like talking.
+        </p>
+
+        <p>
+            I don't promise that life will always be perfect.
+            But I promise that I want to keep choosing you through
+            the imperfect days too.
+        </p>
+
+        <p>
+            And maybe one day, when we look back at this website,
+            we'll laugh and say,
+            <strong>
+                "Look how much we loved each other even back then."
+            </strong>
+        </p>
+
+        <p>
+            Until that day...
+            keep smiling, keep being the beautiful Muqaddas I know,
+            and please never forget that somewhere in this world,
+            there is someone who is extremely grateful that you exist.
+        </p>
+
+        <div class="signature">
+            Yours,<br>
+            Your future husband... hopefully. ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section>
+
+    <h2 class="title">
+        Our Little Memories 📸
+    </h2>
+
+    <p class="subtitle">
+        Every picture has a memory. Every memory has a little piece of my heart.
+    </p>
+
+    <div class="gallery" id="memoryGallery"></div>
+
+    <div class="music-box">
+
+        <button
+            class="music-btn"
+            id="musicBtn"
+            onclick="playBirthdaySong()">
+            🎵 Play Our Song
+        </button>
+
+        <br>
+
+        <audio id="birthdaySong" controls preload="auto" loop>
+            <source src="music/birthday.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="music-status" id="musicStatus">
+            Click the button and let the memories play with the music. ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     THINGS I LOVE
+========================= -->
+
+<section>
+
+    <h2 class="title">
+        Things I Adore About You ❤️
+    </h2>
+
+    <p class="subtitle">
+        I could keep writing these forever...
+    </p>
+
+    <div class="reasons">
+
+        <div class="reason">
+
+            <div class="reason-number">01</div>
+
+            <h3>Your Eyes 👀</h3>
+
+            <p>
+                There is something about your eyes that makes me forget
+                whatever I was saying. I could honestly look at them
+                for far too long.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reason-number">02</div>
+
+            <h3>Your Smile 😊</h3>
+
+            <p>
+                Your smile has this strange little power of making
+                everything feel better. Especially when I know
+                I'm the reason you're smiling.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reason-number">03</div>
+
+            <h3>Your Hair 🌸</h3>
+
+            <p>
+                I don't know what magic you have in those hairs,
+                but they somehow make you look even more beautiful
+                every single time.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reason-number">04</div>
+
+            <h3>Your Heart ❤️</h3>
+
+            <p>
+                Your heart is one of the biggest reasons I love you.
+                The way you care and the little things you do matter
+                more than you realize.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reason-number">05</div>
+
+            <h3>Your Craziness 😂</h3>
+
+            <p>
+                And yes... your crazy side too.
+                Life would honestly be boring without your drama,
+                your moods and your random moments.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reason-number">06</div>
+
+            <h3>Just You 🥹</h3>
+
+            <p>
+                Maybe the biggest reason is simply this:
+                you're Muqaddas.
+                And somehow, that's more than enough for me.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROMISES
+========================= -->
+
+<section>
+
+    <h2 class="title">
+        A Few Promises To You 💍
+    </h2>
+
+    <p class="subtitle">
+        Not perfect promises. Just promises from my heart.
+    </p>
+
+    <div class="promises">
+
+        <div class="promise">
+
+            <span>🤍</span>
+
+            <h3>I Promise To Listen</h3>
+
+            <p>
+                Even when you think I'm not understanding,
+                I'll try harder to understand what's going on
+                inside your heart.
+            </p>
+
+        </div>
+
+
+        <div class="promise">
+
+            <span>🫶</span>
+
+            <h3>I Promise To Support You</h3>
+
+            <p>
+                Your dreams, your goals, your happiness...
+                I want to be the person standing beside you,
+                not standing in your way.
+            </p>
+
+        </div>
+
+
+        <div class="promise">
+
+            <span>🌙</span>
+
+            <h3>I Promise To Stay</h3>
+
+            <p>
+                Life won't always be easy, but whenever things get difficult,
+                I want us to remember that we're on the same team.
+            </p>
+
+        </div>
+
+
+        <div class="promise">
+
+            <span>❤️</span>
+
+            <h3>I Promise To Choose You</h3>
+
+            <p>
+                Not only on the beautiful days.
+                I want to choose you on the ordinary,
+                difficult and messy days too.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FUTURE WIFE
+========================= -->
+
+<section class="future">
+
+    <h2 class="title">
+        One Day... 💍
+    </h2>
+
+    <p class="subtitle">
+        There's a future I secretly get excited about.
+    </p>
+
+    <div class="card">
+
+        <div class="ring">
+            💍
+        </div>
+
+        <h3>
+            "My Future Wife, Muqaddas."
+        </h3>
+
+        <p>
+            Maybe one day I'll wake up beside you,
+            look at you and realize that the girl
+            I once wished for is actually there.
+        </p>
+
+        <br>
+
+        <p>
+            Maybe we'll have our own little home,
+            our own routines,
+            our own silly arguments,
+            our own jokes,
+            our own memories...
+        </p>
+
+        <br>
+
+        <p>
+            And honestly,
+            that's one of the futures I want the most.
+        </p>
+
+        <br>
+
+        <p>
+            <strong style="color:#ff9ec8;">
+                I don't know exactly what tomorrow holds,
+                but if I get to choose,
+                I want a lot of my tomorrows to have you in them.
+                ❤️
+            </strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECRET GIFT
+========================= -->
+
+<section class="gift-section">
+
+    <h2 class="title">
+        I Have One More Thing For You 🎁
+    </h2>
+
+    <p class="subtitle">
+        Don't leave yet... tap the gift.
+    </p>
+
+    <div
+        class="gift"
+        id="gift"
+        onclick="openGift()">
+        🎁
+    </div>
+
+
+    <div
+        class="secret"
+        id="secret">
+
+        <div class="card secret-card">
+
+            <p>
+                Muqquuu Jann...
+            </p>
+
+            <br>
+
+            <p>
+                If someday you ever doubt how much you mean to me,
+                come back to this page.
+            </p>
+
+            <p>
+                Read the words again.
+                Look at the pictures again.
+                Listen to the song again.
+            </p>
+
+            <p>
+                And remember that this wasn't just a birthday website.
+                I made this because there are feelings inside me
+                that I couldn't fit into a simple birthday message.
+            </p>
+
+            <p>
+                You are loved.
+                You are appreciated.
+                You are beautiful.
+                You are precious to me.
+            </p>
+
+            <p>
+                And above everything...
+                <strong style="color:#ff9fc7;">
+                    I'm genuinely grateful that you're part of my life.
+                </strong>
+            </p>
+
+            <div class="poetry">
+
+                <p>
+                    "Na chand chahiye,<br>
+                    na sitaron ki khwahish hai...
+                    <br><br>
+
+                    Bas tu muskuraati rahe,<br>
+                    itni si meri khwahish hai.
+                    <br><br>
+
+                    Aur agar zindagi ne poocha,<br>
+                    sabse khoobsurat cheez kya mili?
+                    <br><br>
+
+                    Main bas tera naam lunga...
+                    <br>
+
+                    <span class="highlight">
+                        Muqaddas. ❤️
+                    </span>
+                </p>
+
+            </div>
+
+            <div class="final-love">
+                Happy Birthday, My Love. ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL MESSAGE
+========================= -->
+
+<section class="final">
+
+    <div class="final-heart">
+        ❤️
+    </div>
+
+    <h2>
+        To My Muqquuu Jann
+    </h2>
+
+    <p>
+        May this birthday bring you everything your heart wishes for.
+    </p>
+
+    <p>
+        And hopefully...
+        a lifetime of birthdays that I get to celebrate beside you.
+    </p>
+
+    <p style="margin-top:25px;color:#ff9fc7;">
+        I love you, Muqaddas. ❤️
+    </p>
+
+</section>
+
+
+<footer>
+
+    Made with love for
+    <strong style="color:#ff9fc7;">
+        Muqquuu Jann
+    </strong>
+
+    <br>
+
+    <small>
+        From the person who hopes to call you his wife one day. 💍
+    </small>
+
+</footer>
+
+</main>
+
+
+<script>
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
+
+function goTo(id){
+
+    document
+        .getElementById(id)
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* =========================
+   PHOTO SLIDESHOW
+========================= */
+
+const gallery =
+    document.getElementById("memoryGallery");
+
+const photos = [];
+
+
+/*
+    Put your photos inside:
+
+    images/photo1.jpg
+    images/photo2.jpg
+    images/photo3.jpg
+    ...
+    images/photo38.jpg
+
+*/
+
+for(let i = 1; i <= 38; i++){
+
+    const photo =
+        document.createElement("div");
+
+    photo.className = "photo";
+
+
+    const img =
+        document.createElement("img");
+
+    img.src =
+        "images/photo" + i + ".jpg";
+
+    img.alt =
+        "Our Memory " + i;
+
+
+    const caption =
+        document.createElement("div");
+
+    caption.className =
+        "photo-caption";
+
+    caption.innerHTML =
+        "A little piece of us ❤️";
+
+
+    img.onerror = function(){
+
+        photo.style.display = "none";
+
+    };
+
+
+    photo.appendChild(img);
+
+    photo.appendChild(caption);
+
+    gallery.appendChild(photo);
+
+    photos.push(photo);
+
+}
+
+
+let currentPhoto = 0;
+
+
+function showPhoto(index){
+
+    photos.forEach(function(photo,number){
+
+        photo.classList.toggle(
+            "active",
+            number === index
+        );
+
+    });
+
+    currentPhoto = index;
+
+}
+
+
+showPhoto(0);
+
+
+setInterval(function(){
+
+    currentPhoto =
+        (currentPhoto + 1) % photos.length;
+
+    showPhoto(currentPhoto);
+
+},6000);
+
+
+/* =========================
+   MUSIC
+========================= */
+
+const song =
+    document.getElementById("birthdaySong");
+
+const musicButton =
+    document.getElementById("musicBtn");
+
+const musicStatus =
+    document.getElementById("musicStatus");
+
+
+function playBirthdaySong(){
+
+    if(song.paused){
+
+        song.play()
+        .then(function(){
+
+            musicButton.innerHTML =
+                "⏸️ Pause Our Song";
+
+            musicStatus.innerHTML =
+                "🎵 Playing for my Muqquuu Jann... ❤️";
+
+            celebrate();
+
+        })
+        .catch(function(){
+
+            musicStatus.innerHTML =
+                "❌ Music was blocked. Click the ▶ Play button on the audio player.";
+
+        });
+
+    }else{
+
+        song.pause();
+
+    }
+
+}
+
+
+song.addEventListener(
+    "play",
+    function(){
+
+        musicButton.innerHTML =
+            "⏸️ Pause Our Song";
+
+        musicStatus.innerHTML =
+            "🎵 Playing for my Muqquuu Jann... ❤️";
+
+    }
+);
+
+
+song.addEventListener(
+    "pause",
+    function(){
+
+        musicButton.innerHTML =
+            "🎵 Play Our Song";
+
+        musicStatus.innerHTML =
+            "Music paused.";
+
+    }
+);
+
+
+song.addEventListener(
+    "canplay",
+    function(){
+
+        musicStatus.innerHTML =
+            "✅ Our birthday music is ready. ❤️";
+
+    }
+);
+
+
+song.addEventListener(
+    "error",
+    function(){
+
+        musicStatus.innerHTML =
+            "❌ Put birthday.mp3 inside the music folder.";
+
+    }
+);
+
+
+/* =========================
+   SECRET GIFT
+========================= */
+
+function openGift(){
+
+    const gift =
+        document.getElementById("gift");
+
+    const secret =
+        document.getElementById("secret");
+
+
+    gift.classList.add("open");
+
+    gift.innerHTML =
+        "💝";
+
+    secret.classList.add("show");
+
+    celebrate();
+
+}
+
+
+/* =========================
+   CELEBRATION
+========================= */
+
+function celebrate(){
+
+    const symbols = [
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "💘",
+        "✨",
+        "🌸",
+        "⭐",
+        "🥹"
+    ];
+
+
+    for(let i = 0; i < 45; i++){
+
+        setTimeout(function(){
+
+            const spark =
+                document.createElement("div");
+
+            spark.className =
+                "spark";
+
+            spark.innerHTML =
+                symbols[
+                    Math.floor(
+                        Math.random() *
+                        symbols.length
+                    )
+                ];
+
+
+            spark.style.left =
+                Math.random() * 100 + "vw";
+
+            spark.style.top =
+                "-30px";
+
+            spark.style.fontSize =
+                (14 + Math.random() * 25) + "px";
+
+
+            document.body.appendChild(
+                spark
+            );
+
+
+            setTimeout(function(){
+
+                spark.remove();
+
+            },3000);
+
+        },i * 45);
+
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createFloatingHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "floating-heart";
+
+    const symbols = [
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💘"
+    ];
+
+    heart.innerHTML =
+        symbols[
+            Math.floor(
+                Math.random() *
+                symbols.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (6 + Math.random() * 6) + "s";
+
+
+    heart.style.fontSize =
+        (14 + Math.random() * 18) + "px";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(function(){
+
+        heart.remove();
+
+    },12000);
+
+}
+
+
+setInterval(
+    createFloatingHeart,
+    1200
+);
+
+
+/* =========================
+   INITIAL CELEBRATION
+========================= */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        setTimeout(
+            celebrate,
+            800
+        );
+
+    }
+);
+
+</script>
+
+</body>
+</html>
